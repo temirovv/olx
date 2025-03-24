@@ -66,6 +66,8 @@ class ProductView(ListCreateAPIView):
     serializer_class = ProductGenericSerializer
 
 class ProductModelViewSet(ModelViewSet):
-    queryset = ProductModel.objects.all()
+    http_method_names = ['get', 'post', 'head', 'options']
     serializer_class = ProductGenericSerializer
 
+    def get_queryset(self):
+        return ProductModel.objects.all()

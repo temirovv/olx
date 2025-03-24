@@ -6,7 +6,7 @@ from .views import BarchaProductAPI, AddProduct, \
         ProductView, ProductModelViewSet
 
 router = SimpleRouter()
-router.register('products', ProductModelViewSet)
+router.register('products', ProductModelViewSet, basename='products')
 print(router.urls)
 
 urlpatterns = [

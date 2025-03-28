@@ -10,6 +10,8 @@ urlpatterns = [
     path('api/', include('Usersapp.urls')),  
     path('products/', include('ProductApp.urls')), 
     path('category/', include('CategoryApp.urls')),
+
+    path('olx-seller/', include('seller.urls')),
     
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
